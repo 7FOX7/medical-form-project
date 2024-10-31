@@ -1,0 +1,176 @@
+:root {
+	--main-color: #00ffa7;
+	--darker-color: #00bd7c; 
+	--asterisk-color: rgb(255, 0, 0); 
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	padding: 0; 
+	margin: 0; 
+	background-color: #000000;
+	color: var(--darker-color);
+}
+
+footer {
+	background-color: var(--main-color);
+	color: #000;
+	margin-top: 25px;
+	padding: 15px;
+	text-align: center;
+}
+
+p {
+	margin: 0; 
+}
+
+input[type="text"],
+input[type="email"], 
+input[type="tel"] {
+	background: white; 
+	display: block; 
+	border: 1px solid #000000; 
+	border-radius: 0;
+	min-height: 2.5rem; 
+	width: 100%; 
+}
+
+input[type="file"], 
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+	margin-bottom: 10px; 
+	margin-top: 10px;
+}
+
+:checked {
+	background-color: var(--main-color);  
+	color: var(--main-color); 
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+	outline: 2px solid var(--main-color); 
+}
+
+fieldset {
+	border-color: rgba(0, 128, 64, 0.4); 
+	border-style: solid; 
+	margin-bottom: 32px; 
+	padding: 10px; 
+}
+
+legend {
+	color: var(--main-color); 
+	font-size: 1.25em; 
+	font-weight: 700;
+}
+
+select {
+	border-color: var(--main-color); 
+	border-radius: 0;
+	color: #000000; 
+	min-height: 2.5rem; 
+	width: 100%; 
+	cursor: pointer; 
+}
+
+textarea {
+	border-color: var(--darker-color); 
+	border-radius: 0;
+	min-height: 250px;
+	width: 100%; 
+}
+
+label {
+	font-size: 0.9rem; 
+}
+
+::placeholder {
+	color: #bbb; 
+	font-size: 0.8em; 
+	padding-left: 5px; 
+}
+
+button {
+	background: var(--main-color); 
+	border: 1px solid transparent; 
+	border-radius: 5px;
+	color: #000000; 
+	font-size: 1rem; 
+	margin-top: 15px; 
+	padding: 10px 30px;  
+	cursor: pointer;
+}
+button:hover {
+	background: var(--darker-color); 
+}
+
+.user {
+	font-size: 0.75em; 
+	text-align: right; 
+	padding-top: 10px; 
+	padding-right: 10px; 
+}
+
+.two-columns, 
+.inner-two-columns {
+	display: grid; 
+}
+
+.two-columns {
+	grid-template-columns: 1fr;
+	gap: 10px; 
+}
+
+.inner-two-columns {
+	grid-template-columns: repeat(2, 1fr); 
+	margin-bottom: 20px; 
+	margin-top: 10px; 
+	width: 100%; 
+	align-items: center; 
+}
+
+.log {
+	height: auto; 
+	width: 70%; 
+	margin-bottom: 20px; 
+}
+
+.required-asterisk {
+	color: var(--asterisk-color); 
+	font-weight: 700;
+	margin-left: 2px;
+}
+
+#wrapper {
+	margin: 15px auto;
+	width: 95%;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 1.1rem;
+	}
+	.two-columns {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 15px; 
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	body {
+		font-size: 1.25rem; 
+	}
+	#wrapper {
+		width: 65%; 
+	}
+	.two-columns {
+		gap: 20px; 
+	}
+}
