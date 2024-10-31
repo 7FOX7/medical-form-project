@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>7FOX7 Health</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+        <header class="two-columns">
+            <div><img class="logo" src="images/fox-logo.webp" alt="logo" width="200" height="200" draggable="false"></div>
+            <div class="user">
+                <p>Hi, John Doe!</p>
+            </div>
+        </header>
+        <main>
+            <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                <fieldset>
+                    <legend>Patient information</legend>                
+                    <p><small><strong>Note:</strong> Fields marked with an asterisk (<span class="required-asterisk">*</span>) are required.</small></p>
+                    <div class="two-columns">
+                        <div>
+                            <label for="firstName">First Name<span class="required-asterisk">*</span></label>
+                            <input 
+                                id="firstName" 
+                                name="firstName" 
+                                type="text" 
+                                placeholder="Evgenii" 
+                                required 
+                                aria-required="true"
+                            />
+                        </div>
+                        <div>
+                            <label for="lastName">Last Name<span class="required-asterisk">*</span></label>
+                            <input
+                                id="lastName" 
+                                name="lastName" 
+                                type="text" 
+                                placeholder="Khe" 
+                                required 
+                                aria-required="true"
+                            />
+                        </div>
+                        <div>
+                            <label for="email">Email<span class="required-asterisk">*</span></label>
+                            <input
+                                id="email" 
+                                name="email" 
+                                type="email" 
+                                placeholder="samle@yahoo.com" 
+                                required 
+                                aria-required="true"
+                            />
+                        </div>
+                        <div>
+                            <label for="phone">Phone<span class="required-asterisk">*</span></label>
+                            <input
+                                id="phone" 
+                                name="phone" 
+                                type="tel" 
+                                placeholder="123-456-7890" 
+                                required 
+                                aria-required="true"
+                            />
+                        </div>
+                        <div>
+                            <label for="address">Address<span class="required-asterisk">*</span></label>
+                            <input
+                                id="address" 
+                                name="address" 
+                                type="text" 
+                                placeholder="Street, PO" 
+                                required 
+                                aria-required="true"
+                            />
+                        </div>
+                        <div>
+                            <label for="city">City<span class="required-asterisk">*</span></label>
+                            <input
+                                id="city" 
+                                name="city" 
+                                type="text" 
+                                placeholder="New York City" 
+                                required 
+                                aria-required="true"
+                            />
+                        </div>
+                        <div>
+                            <label for="province">Province<span class="required-asterisk">*</span></label>
+                            <select 
+                                id="province"
+                                name="province"
+                                required
+                                aria-required="true"
+                            >
+                                <option
+                                    disabled
+                                    selected
+                                >
+                                    Select Province
+                                </option>
+                                <option value="British Columbia">
+                                    British Columbia
+                                </option>
+                                <option value="Manitoba">
+                                    Manitoba
+                                </option>
+                                <option value="Newfoundland and Labrador">
+                                    Newfoundland and Labrador
+                                </option>
+                                <option value="Northwest Territories">
+                                    Northwest Territories
+                                </option>
+                                <option value="Nova Scotia">
+                                    Nova Scotia
+                                </option>
+                                <option value="Ontario">
+                                    Ontario
+                                </option>
+                                <option value="Quebec">
+                                    Quebec
+                                </option>
+                                <option value="Saskatchewan">
+                                    Saskatchewan
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="postalCode">Postal Code<span class="required-asterisk">*</span></label>
+                            <input
+                                id="postalCode" 
+                                name="postalCode" 
+                                type="text" 
+                                placeholder="L4C 0Z4" 
+                                required
+                                aria-required="true"
+                                pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                            />
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Medical Information</legend>
+                    <div classs="two-columns">
+                        <div>
+                            <label>List Any Health Conditions</label>
+                            <div class="inner-two-columns">
+                                <div>
+                                    <input
+                                        id="diabetes"
+                                        name="diabetes"
+                                        type="checkbox"
+                                    />
+                                    <label for="diabetes">Diabetes</label>
+                                </div>
+                                <div>
+                                    <input id="bloodPressure" name="bloodPressure" type="checkbox"> 
+                                    <label for="bloodPressure">Blood Pressure</label>         
+                                </div>
+                                <div>    
+                                    <input id="heartCondition" name="heartCondition" type="checkbox"> 
+                                    <label for="heartCondition">Heart Condition</label> 
+                                </div>
+                                <div>
+                                    <input id="asthma" name="asthma" type="checkbox">
+                                    <label for="asthma">Asthma</label>
+                                </div>
+                                <div>
+                                    <input id="arthritis" name="arthritis" type="checkbox"> 
+                                    <label for="arthritis">Arthritis</label> 
+                                </div>
+                                <div>                                
+                                    <input id="osteoporosis" name="osteoporosis" type="checkbox">
+                                    <label for="osteoporosis">Osteoporosis</label>
+                                </div>
+                            </div>
+                            <label for="fileUpload">Upload Documents</label><br />
+                            <input 
+                                id="fileUpload" 
+                                name="fileUpload"
+                                type="file"
+                            /> 
+                        </div>
+                        <div>
+                            <label for="comments">Additional Information</label>
+                            <textarea id="comments" name="comments"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>For Office Use</legend>    
+                    <div class="two-columns">
+                        <div>
+                            <label>Is this client a new patient<span class="required-asterisk">*</span></label> <br />
+                            <input
+                                id="newPatientYes"
+                                name="newPatient"
+                                value="yes"
+                                type="radio"
+                                required
+                                aria-required="true"
+                            />
+                            <label for="newPatientYes">Yes</label>
+                            <input
+                                id="newPatientNo"
+                                name="newPatient"
+                                value="no"
+                                type="radio"
+                                required
+                                aria-required="true"
+                            />
+                            <label for="newPatientNo">No</label>
+                        </div>
+                        <div>
+                            <label for="entryDate">Entry Date<span class="required-asterisk">*</span></label>
+                            <input
+                                id="entryDate"
+                                name="entryDate"
+                                value="no"
+                                type="date"
+                                required
+                                aria-required="true"
+                            />
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="two-columns">
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        </div>
+        <footer>
+            <p><small>Copyright &copy; 2024 7FOX7. All rights reserved.</small></p>
+        </footer>
+    </body>
+</html>
